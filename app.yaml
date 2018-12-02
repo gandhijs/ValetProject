@@ -1,0 +1,18 @@
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /
+  script: Valet_Front_End.app
+
+libraries:
+- name: MySQLdb
+  version: "latest"
+
+# [START env_variables]
+env_variables:
+    CLOUDSQL_CONNECTION_NAME: dogwood-method-220519:us-east1:myinstance
+    CLOUDSQL_USER: root
+    CLOUDSQL_PASSWORD: abc123
+# [END env_variables]
